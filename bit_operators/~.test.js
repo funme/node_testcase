@@ -2,7 +2,9 @@
  * [Tilde or the Floor? Practical use for JavaScript bitwise operators. (#1) | rocha.la | JavaScript and my other hobbies](http://rocha.la/JavaScript-bitwise-operators-in-practice)
  *
  * 按位取反 ~
- * 特点: ~ -1 的结果为 0, 其他数值皆不为 0, n => -(n+1)
+ * 特点:
+ *     ~ -1 的结果为 0, 其他数值皆不为 0, n => -(n+1)
+ *     ~~ 效果等同于 Math.floor
  */
 test('~ bit operator with integers', () => {
   expect(~ -1).toBe(0);

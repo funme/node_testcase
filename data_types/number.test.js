@@ -26,27 +26,18 @@ test('adding floating point numbers', () => {
 });
 
 test('NaN number', () => {
-  const n = NaN;
-  const z = 0;
-  const sn = '0';
-  const ss = 'a';
-  const se = '';
-  expect(n).toBeNaN();
-  expect(z).not.toBeNaN();
-  expect(Number(sn)).not.toBeNaN();
-  expect(Number(ss)).toBeNaN();
-  expect(Number(se)).toBe(0);
+  expect(NaN).toBeNaN();
+  expect(0).not.toBeNaN();
+  expect(Number('0')).not.toBeNaN();
+  expect(Number('a')).toBeNaN();
+  expect(Number('')).toBe(0);
 });
 
 test('isNaN()', () => {
-  const n = NaN;
-  const z = 0;
-  const sn = '0';
-  const ss = 'a';
-  expect(isNaN(n)).toBeTruthy();
-  expect(isNaN(z)).toBeFalsy();
-  expect(isNaN(Number(sn))).toBeFalsy();
-  expect(isNaN(Number(ss))).toBeTruthy();
+  expect(isNaN(NaN)).toBeTruthy();
+  expect(isNaN(0)).toBeFalsy();
+  expect(isNaN(Number('0'))).toBeFalsy();
+  expect(isNaN(Number('a'))).toBeTruthy();
 });
 
 /**
